@@ -13,3 +13,6 @@ This repository contains Python and C programming tasks for the **SE 202: High L
 - [python-more_classes](./python-more_classes) - More classes, properties, custom representation, instance counts, static/class methods, and backtracking solvers.
 - [python-everything_is_object](./python-everything_is_object) - Mutability vs immutability, variables, references, identity, equality, interning, and passing arguments.
 - [python-inheritance](./python-inheritance) - Inheritance, superclass, subclass, class lookup, overriding methods, isinstance/issubclass built-in functions.
+- [python-input_output](./python-input_output) - File handling, reading/writing UTF-8 text files, JSON serialization, Student classes, Pascal's triangle, and stream stats.
+- [python-test_driven_development](./python-test_driven_development) - Test-driven development (TDD), doctests, unittests, matrix operations, and CPython string inspection.
+- [python-almost_a_circle](./python-almost_a_circle) - Object-oriented programming, inheritance, class hierarchy (`Base`, `Rectangle`, `Square`), JSON/CSV serialization, and Turtle GUI drawing.
