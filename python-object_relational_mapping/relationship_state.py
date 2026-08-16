@@ -8,8 +8,9 @@ Base = declarative_base()
 
 
 class State(Base):
-    """Class State that links to the MySQL table states with relationship to City."""
+    """Class State that links to MySQL table states with City relation."""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-    cities = relationship("City", backref="state", cascade="all, delete-orphan")
+    cities = relationship("City", backref="state",
+                          cascade="all, delete-orphan")
