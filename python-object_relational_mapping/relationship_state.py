@@ -1,20 +1,15 @@
 #!/usr/bin/python3
-"""
-Contains State class and Base, an instance of declarative_base()
-"""
-from sqlalchemy import Column, Integer, String, MetaData
+"""Contains the class definition of a State with relationships."""
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
-mymetadata = MetaData()
-Base = declarative_base(metadata=mymetadata)
+Base = declarative_base()
 
 
 class State(Base):
-    """
-    Class with id and name attributes of each state
-    """
+    """Class State that links to the MySQL table states with relationship to City."""
     __tablename__ = 'states'
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-    cities = relationship("City", backref="states")
+    cities = relationship("City", backref="state", cascade="all, delete-orphan")
